@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div id="particles-js">
+        <div id="title">
+             <h1>Nicolás Piovano</h1>
+            <h2 id="subtitle">Developer</h2>
+
+            <div id="navbar">
+ 
+                <span class="navlink" id="email"><a href="mailto:nmpiovano@gmail.com?Subject=Hola%20Nico!" ><i class="fa fa-envelope-o" aria-hidden="true"></i></a></span> 
+                <span class="navlink" id="github"><a href="http://www.github.com/NIPIO" target="_newtab"><i class="fa fa-github" aria-hidden="true"></i></a></span>
+                 <span class="navlink" id="linkedin"><a href="https://www.linkedin.com/in/nicol%C3%A1s-m-piovano-911557131/" target="_newtab"><i class="fa fa-linkedin" aria-hidden="true"></i></a></span>
+                <span class="navlink" id="facebook"><a href="http://www.facebook.com/nico.piovanoo" target="_newtab"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></span>
+                <span class="navlink" id=""><a href="{{ asset('nmpcv.pdf') }}" target="_newtab" download="Nicolás Piovano CV 2020"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+    
+     <div id="sidebarTab-left" class="sidebarTab">
+        <h5>LENGUAJES</h5>
+        <p id="arrow-left" class="arrow"></p>
+    </div>
+    <div id="sidebarTab-right" class="sidebarTab">
+        <h5>TRABAJOS</h5>
+        <p id="arrow-right" class="arrow"></p>
+    </div>
+    <div id="sidebar-left" class="sidebar sid-left">
+        <h3>LENGUAJES</h3> 
+        <div id="lenguajes">
+        </div>
+        <div id='divTextoLenguajes'>
+            <div id="textoLenguajes"></div>
+        </div>
+    </div>
+    <div id="sidebar-right" class="sidebar sid-right">
+        <h3>TRABAJOS</h3>
+        <div id="trabajos">
+            <div onclick="openModal(mobile)"><img src="./img/mobile.png" alt=""><br><span><b>Mobile</b></span></div>
+            <div onclick="openModal(web)"><img src="./img/web.png" alt=""><br><span><b>Web</b></span></div>
+        </div>
+        <div id="myModalConfirmacion" class="modal">
+            <div>           
+                 <p>Las aplicaciones mostradas a continuación son DEMOs creadas con <b> fines educativos y recreativos. </b>  <br> La información fue obtenida de Internet y no se viola ningún derecho de autor. <br> Fueron desarrolladas tanto para IOs como para Android.</p> 
+                <p>Estos trabajos están disponibles en Github.</p>
+                <div>
+                <button class="btn btn-info" onclick="closeConfirmacion()">ENTIENDO</button>
+                </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal" aria-hidden="true" >
+            <div class="modal-dialog" > 
+                <div class="modal-content"> 
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carousel-example-2"  class="carousel slide carousel-fade" >
+                          <div class="carousel-inner">
+                          </div>
+                          <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+{% endblock %}
